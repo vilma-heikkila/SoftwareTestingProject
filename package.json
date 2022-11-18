@@ -6,12 +6,16 @@
   "type": "module",
   "scripts": {
     "test2": "mocha -R mocha-lcov-reporter > node_modules/.bin/coverage/coverage.lcov test/*.test.js",
-    "test":  "nyc --reporter=html --reporter=text mocha --timeout 10000 --exit test/add.test.js",
-    "coverage": "nyc report --reporter=text-lcov | coveralls"
+    "test": "mocha",
+    "coverage": "npx istanbul cover _mocha -- -R spec | coveralls"
   },
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "@babel/core": "^7.20.2",
+    "@babel/register": "^7.18.9",
+    "babel-plugin-istanbul": "^6.1.1",
+    "babel-register": "^6.26.0",
     "chai": "^4.3.7",
     "coveralls": "^3.1.1",
     "jscover": "^1.0.0",
