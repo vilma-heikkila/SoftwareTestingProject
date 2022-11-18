@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "test2": "mocha -R mocha-lcov-reporter > node_modules/.bin/coverage/coverage.lcov test/*.test.js",
-    "test": "nyc mocha",
+    "test": "nyc _mocha test/*.test.js",
     "coverage": "cross-env NODE_ENV=test nyc --reporter=lcov --reporter=text mocha test/*.js"
   },
   "author": "",
