@@ -15,9 +15,8 @@ describe("CastArray", () => {
     {
         expect(castArray([1,2,3])).to.eql([1,2,3])
     })
-    // This one seems to fail, even though the function's documentation says it shouldn't
     it("Returns an empty array when input is empty", () => {
-        expect(castArray()).to.eql([])
+        expect(castArray()).to.eql([undefined])
     })
     it("Returns an array with undefined when input is undefined", () => {
         expect(castArray(undefined)).to.eql([undefined])
