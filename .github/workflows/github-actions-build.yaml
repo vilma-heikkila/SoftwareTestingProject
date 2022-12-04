@@ -7,7 +7,7 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
+  build and test:
 
     runs-on: ubuntu-latest
 
@@ -30,4 +30,3 @@ jobs:
         uses: coverallsapp/github-action@master
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          repo-token: ${{ secrets.REPO_TOKEN }}
