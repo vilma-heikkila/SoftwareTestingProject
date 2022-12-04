@@ -27,4 +27,10 @@ describe("Every", () => {
     it("Returns false when only one element fulfils the predicate", () => {
         expect(every(onePositive, isPositive)).to.equal(false)
     })
+    it("Throws an error when the predicate is not a function", () => {
+        expect(every.bind(every, [allPositive, "notAFunction"])).to.throw('predicate is not a function')
+    })
+    it("Throws an error when the array is not an array", () => {
+        expect(every.bind(every, ["not an Array", isPositive])).to.throw()
+    })
 })
