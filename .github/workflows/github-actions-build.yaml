@@ -28,6 +28,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
+      - run: npm test
       - run: npm coverage
       - run: npm run coveralls
          
