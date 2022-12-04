@@ -28,7 +28,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - run: npm run coverage
+      - run: npm coverage
       - run: npm run coveralls
          
       - name: Coveralls
