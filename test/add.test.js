@@ -20,7 +20,13 @@ describe("Add", () => {
     it("Adds negative number to negative number", () => {
         expect(add(-3,-6)).to.eql(-9)
     })
-    //it("Throws an error when the parameters are not numbers", () => {
-    //    expect(add(a,b)).to.throw('a is not defined')
-    //})
+    it("Throws an error when the parameters are undefined", () => {
+        expect(add(undefined,undefined)).to.throw
+    })
+    it("Returns zero when parameters are undefined", () => {
+        expect(add(undefined, undefined)).to.eql(0)
+    })
+    it("Throws an error when the parameters are not numbers", () => {
+        expect(add(NaN,'b')).to.throw
+    })
 })

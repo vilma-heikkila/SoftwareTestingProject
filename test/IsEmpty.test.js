@@ -37,5 +37,12 @@ describe("IsEmpty", () => {
     it("Returns true when object is empty", () => {
         expect(isEmpty(emptyObject)).to.eql(true)
     })
+    it("Returns true when NaN is given as parameter", () => {
+        expect(isEmpty(NaN)).to.eql(true)
+    })
+    it("Returns true when false is given as parameter", () => {
+        expect(isEmpty(false)).to.eql(true)
+    })
+
 
 })

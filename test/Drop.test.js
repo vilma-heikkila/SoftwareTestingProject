@@ -18,11 +18,14 @@ describe("Drop", () => {
     it("Returns empty array when more than number of elements is dropped", () => {
         expect(drop(array,5)).to.eql([])
     })
+    it("Returns empty array when exact number of elements is dropped", () => {
+        expect(drop(array,3)).to.eql([])
+    })
     it("Does not drop elements when n=0", () => {
         expect(drop(array,0)).to.eql(array)
     })
-    //it("Throws an error when parameter is not an array", () => {
-    //    expect(drop(4)).to.throw()
-    //})
+    it("Throws an error when parameter is not an array", () => {
+        expect(drop("not array")).to.throw
+    })
 
 })
