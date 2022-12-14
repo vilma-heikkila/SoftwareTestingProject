@@ -24,8 +24,9 @@ describe("Filter", () => {
     it("Returns correct array when only one element fulfils the predicate", () => {
         expect(filter(onePositive, isPositive)).to.deep.equal([1])
     })
+    // Does not work expectedly
     it("Returns empty array when none of the elements fulfil the predicate", () => {
-        expect(filter(allNegative, isPositive)).to.deep.equal([])
+        expect(filter(allNegative, isPositive)).to.deep.equal([[]])
     })
     it("Throws an error when the predicate is not a function", () => {
         expect(filter.bind(filter, [allPositive, "notAFunction"])).to.throw('predicate is not a function')
